@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blob</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <main>
+    <link rel="stylesheet" href="./styles.css" />
 
+    <script src="
+    https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js
+    "></script>
+  </head>
+  <body>
+    <main>
+      <svg
+        id="visual"
+        viewBox="0 0 900 600"
+        width="900"
+        height="600"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <rect x="0" y="0" width="900" height="600" fill="#FF0066"></rect>
+        <g transform="translate(449.89472965222035 270.8916544483379)">
+          <path
+            id="blob1"
+            d="M158.4 -140.9C208.4 -108.4 254.2 -54.2 247.6 -6.6C241 41 182 82 132 128C82 174 41 225 -9.5 234.6C-60.1 244.1 -120.2 212.2 -169.7 166.2C-219.2 120.2 -258.1 60.1 -245.7 12.4C-233.4 -35.4 -169.7 -70.7 -120.2 -103.2C-70.7 -135.7 -35.4 -165.4 9.4 -174.8C54.2 -184.2 108.4 -173.4 158.4 -140.9"
+            fill="#BB004B"
+          ></path>
+        </g>
+        <g transform="translate(409.8146824449346 298.9337404394945)">
+          <path
+            visibility="hidden"
+            id="blob2"
+            d="M184.9 -167.8C228.4 -141.4 244.7 -70.7 235.3 -9.4C225.9 51.9 190.7 103.7 147.2 138.2C103.7 172.7 51.9 189.9 8 181.8C-35.8 173.8 -71.7 140.7 -96.7 106.2C-121.7 71.7 -135.8 35.8 -146.9 -11.1C-158 -58 -166 -116 -141 -142.3C-116 -168.6 -58 -163.3 6.4 -169.7C70.7 -176 141.4 -194.1 184.9 -167.8"
+            fill="#BB004B"
+          ></path>
+        </g>
+      </svg>
     </main>
-</body>
+
+    <script>
+      const tween = KUTE.fromTo(
+        "#blob1",
+        { path: "#blob1" },
+        { path: "#blob2" },
+        { repeat: 10, duration: 3000, yoyo: true }
+      );
+      tween.start();
+    </script>
+  </body>
 </html>
